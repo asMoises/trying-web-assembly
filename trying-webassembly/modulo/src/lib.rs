@@ -6,7 +6,7 @@ pub fn add(left: u64, right: u64) -> u64 {
 
 #[wasm_bindgen]
 pub fn texto() -> String {
-	String::from("Bem-vindo ao mundo do WebAssembly")
+	String::from("Bem-vindo ao WebAssembly!")
 }
 
 #[cfg(test)]

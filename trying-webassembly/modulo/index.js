@@ -3,6 +3,11 @@ import init, { texto } from "./pkg/modulo.js";
 async function executar() {
   await init();
 
+  const addTechBtn = document.getElementById("addTechBtn");
+  const form = document.getElementById("devForm");
+  const developers = [];
+  let inputRows = 0;
+
   addTechBtn.addEventListener("click", function (ev) {
     const h2 = document.getElementById("h2");
     h2.innerText = texto();
@@ -117,10 +122,5 @@ function createInput(id, value, name, type = "text", placeholder = "") {
   input.placeholder = placeholder;
   return input;
 }
-
-const addTechBtn = document.getElementById("addTechBtn");
-const form = document.getElementById("devForm");
-const developers = [];
-let inputRows = 0;
 
 executar();
