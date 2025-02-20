@@ -9,6 +9,11 @@ pub fn texto() -> String {
 	String::from("Bem-vindo ao WebAssembly!")
 }
 
+struct Pessoa{
+    idade:u8,
+    nome:[u8;8],
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;

@@ -124,3 +124,18 @@ function createInput(id, value, name, type = "text", placeholder = "") {
 }
 
 executar();
+
+// Buffers e Views
+
+// buffers com 256
+const bufferMemoria = new ArrayBuffer(256);
+
+// Views
+const fullView = new Uint8Array(bufferMemoria);
+
+// Outros exemplos de views que especificam o deslocamento inicial e o número de elementos
+const viewPrimeiraMetade = new Uint8Array(bufferMemoria, 0, 128) // começa na posição 0 e avança 128 posições, parando na 128
+const viewTerceiroQuarto = new Uint8Array(bufferMemoria, 128, 64) // começa no 128 e avança 64 posições, parando na posição 192, ou seja de 128 ate 192 pe o 3/4
+const resto = new Uint8Array(bufferMemoria, 192) // aqui indico apenas o inicio d deslocamento
+
+console.log(bufferMemoria.byteLength) // 256
